@@ -1,12 +1,18 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { LandingPage } from '../pages/landing/landing';
+import { CvFormPage } from '../pages/cv-form/cv-form';
+import { FormsProvider } from "../providers/forms-provider";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LandingPage,
+    CvFormPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -14,8 +20,14 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LandingPage,
+    CvFormPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    Storage,
+    FormsProvider
+  ]
 })
-export class AppModule {}
+export class AppModule { }
