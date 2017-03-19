@@ -5,6 +5,7 @@ In order for us to all have the same code / progress, I'll be pushing all the co
 ## Installation Steps
 
 _WINDOWS USERS_: You need to use ght Git Bash terminal not the windows one
+
 _NOTE_: Text in `text` are commands to be run on your terminal
 
 - `mkdir workshop` on your Desktop
