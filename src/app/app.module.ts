@@ -6,13 +6,14 @@ import { HomePage } from '../pages/home/home';
 import { LandingPage } from '../pages/landing/landing';
 import { CvFormPage } from '../pages/cv-form/cv-form';
 import { FormsProvider } from "../providers/forms-provider";
-
+import { DetailsPage } from '../pages/details/details';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LandingPage,
-    CvFormPage
+    CvFormPage,
+    DetailsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -22,7 +23,8 @@ import { FormsProvider } from "../providers/forms-provider";
     MyApp,
     HomePage,
     LandingPage,
-    CvFormPage
+    CvFormPage,
+    DetailsPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },

@@ -4,7 +4,7 @@ import { CvFormPage } from '../cv-form/cv-form';
 
 import { Storage } from '@ionic/storage';
 import { CVForm } from "../../classes/cv-form";
-
+import { DetailsPage } from '../details/details';
 @Component({
   selector: 'page-landing',
   templateUrl: 'landing.html'
@@ -40,5 +40,9 @@ export class LandingPage {
     let formModal = this._modalController.create(CvFormPage);
     formModal.present();
   }
-
+  public viewDetails(form){
+    this.navCtrl.push(DetailsPage, {
+      form: form
+    });
+  }
 }
