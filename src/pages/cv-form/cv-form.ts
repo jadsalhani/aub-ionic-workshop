@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, ViewController } from 'ionic-angular';
 // import { LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -20,7 +20,8 @@ export class CvFormPage {
     public navParams: NavParams,
     private _loadingController: LoadingController,
     private _storage: Storage,
-    public formsProvider: FormsProvider) {
+    public formsProvider: FormsProvider,
+    private _viewController: ViewController) {
 
     this.formGroup = new FormGroup({
       name: new FormControl('', [Validators.required]),
@@ -77,4 +78,11 @@ export class CvFormPage {
     console.log(cvForm);
   }
 
+  /**
+   * close
+   */
+  public close() {
+    // please close modal;
+    this._viewController.dismiss();
+  }
 }

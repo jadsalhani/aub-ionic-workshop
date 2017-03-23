@@ -1,16 +1,18 @@
 <ion-header>
- 
   <ion-navbar>
     <ion-title>landing</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
- 
 </ion-header>
- 
- 
+
 <ion-content padding>
- 
+
   <ion-list>
- 
+
     <ion-card *ngFor="let form of forms" (click)="viewDetails(form)">
       <ion-card-header>
         {{ form.name }}
@@ -20,9 +22,9 @@
         <p>{{form.phonenumber}}</p>
       </ion-item>
     </ion-card>
- 
+
   </ion-list>
- 
-  <button ion-button color="primary" (click)="showform()"> Create CV </button>
- 
+
+  <button ion-button color="primary" (click)="showForm()"> Create CV </button>
+
 </ion-content>

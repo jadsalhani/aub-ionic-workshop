@@ -21,6 +21,7 @@
         <h2>{{form.email}}</h2>
         <p>{{form.phonenumber}}</p>
         <p *ngIf="!form.isGraduated">Undergraduate</p>
+        <p *ngIf="form.isGraduated">Graduated</p>
         <p>{{form.isGraduated}}</p>
         <p>{{form.proffession}}</p>
         <p>{{form.country}}</p>

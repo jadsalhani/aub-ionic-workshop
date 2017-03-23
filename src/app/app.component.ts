@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
 import { LandingPage } from '../pages/landing/landing';
-
+import { CvFormPage } from "../pages/cv-form/cv-form";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+  @ViewChild(Nav) nav: Nav;
   rootPage = LandingPage;
+  public cvFormPage = CvFormPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
@@ -19,5 +21,12 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+  }
+
+  /**
+   * openPage
+   */
+  public openPage(page: any) {
+    this.nav.push(page);
   }
 }
