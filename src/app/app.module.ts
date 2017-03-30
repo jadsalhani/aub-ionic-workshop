@@ -7,13 +7,16 @@ import { LandingPage } from '../pages/landing/landing';
 import { CvFormPage } from '../pages/cv-form/cv-form';
 import { FormsProvider } from "../providers/forms-provider";
 import { DetailsPage } from '../pages/details/details';
+import { RegisterPage } from "../pages/register/register";
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LandingPage,
     CvFormPage,
-    DetailsPage
+    DetailsPage,
+    RegisterPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,7 +27,8 @@ import { DetailsPage } from '../pages/details/details';
     HomePage,
     LandingPage,
     CvFormPage,
-    DetailsPage
+    DetailsPage,
+    RegisterPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },

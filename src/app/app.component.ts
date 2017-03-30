@@ -5,6 +5,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { HomePage } from '../pages/home/home';
 import { LandingPage } from '../pages/landing/landing';
 import { CvFormPage } from "../pages/cv-form/cv-form";
+import { RegisterPage } from "../pages/register/register";
 
 @Component({
   templateUrl: 'app.html'
@@ -13,6 +14,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage = LandingPage;
   public cvFormPage = CvFormPage;
+  public registerPage = RegisterPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
